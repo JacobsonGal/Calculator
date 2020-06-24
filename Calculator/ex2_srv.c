@@ -1,6 +1,4 @@
-// Operating Systemes - Assigment 2 - ex2_srv.c //
-// גל יעקובסון : 205585227 //
-// רון פייביש : 313541344 //
+// Developed by Gal Jacobson
 
 #include <unistd.h>
 #include <stdio.h>
@@ -179,7 +177,6 @@ void Files(){
     if((write(to_clientID,&charResult,mystrlen(charResult)))<0)
     {close(to_clientID);Error();}
 
-    puts("\n***** End of Stage 2 ***** \n");
     // Signaling the client:
     kill(myAtoi(PID),SIGUSR2);
     exit(-1);
@@ -187,7 +184,6 @@ void Files(){
 
 //File handler function:
 void sig_hand(int sig){
-    puts("\n***** End of Stage 1 ***** \n");
     signal(SIGUSR1,sig_hand);
     int stat;
     pid_t PID;

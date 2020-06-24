@@ -1,6 +1,4 @@
-// Operating Systemes - Assigment 2 - ex2_client.c //
-// גל יעקובסון : 205585227 //
-// רון פייביש : 313541344 //
+// Developed by Gal Jacobson
 
 #include <unistd.h>
 #include <stdio.h>
@@ -134,7 +132,6 @@ void sig_hand(int sig){
     {close(to_clientID);Error();}
     if((remove(to_client)<0)) Error();
     
-    puts("\n***** End of Stage 3 ***** \n");
     printf("For Client : %s \n",pid);
     printf("The Result is : %s \n",result);
     return;
